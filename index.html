@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Besful Industria Gráfica - Imprenta</title>
+    <meta name="apple-mobile-web-app-title" content="Besful">
+    <title>Besful S.A. Industria Gráfica</title>
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/besful-styles.css">
@@ -14,16 +16,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap"
         rel="stylesheet">
+
+
+    <!-- webapp -->
+    <link rel="icon" type="image/png" href="/fav/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/fav/favicon.svg" />
+    <link rel="shortcut icon" href="/fav/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png" />
+    <link rel="manifest" href="/fav/site.webmanifest" />
+
+    <!-- js -->
+    <script src="/js/app.js"></script>
+
 </head>
 
 <body class="body-bg">
-    <nav class="top-nav">
-        <img src="/src/icons/besful-favicon.svg" alt="Besful menu icon" class="menu-icon">
-        <a href="#" class="burger-button">
-            <img src="/src/icons/burgermenu-icon.png" alt="burger menu icon" class="menu-icon">
-        </a>
+    <div class="topbar">
+        <nav class="top-nav">
 
-    </nav>
+            <img src="/src/icons/besful-favicon.svg" alt="Besful menu icon" class="menu-icon">
+            <a href="#" class="burger-button">
+                <img src="/src/icons/burgermenu-icon.png" alt="burger menu icon" class="menu-icon">
+            </a>
+
+        </nav>
+
+
+    </div>
     <main class="main-content">
 
 
@@ -69,9 +88,8 @@
 
         <section class="services__extend about-us">
             <h3>sobre nosotros</h3>
-            <p><span class="bold">BESFUL Industria Gráfica</span>, es una empresa joven integrada por un equipo humano
-                con
-                muchos años de experiencia en el rubro. </p>
+            <p><span class="bold">BESFUL Industria Gráfica</span>, es una empresa integrada por un equipo humano
+                con más de 10 años de experiencia. </p>
             <p>Fue concebida con el firme propósito de satisfacer las necesidades de nuestros clientes en el ámbito
                 publicitario a través de los medios impresos, estableciendo de esta
                 manera, una sólida presencia en el entorno empresarial.</p>
@@ -90,7 +108,7 @@
 
         <section class="services__extend ">
             <h2 class="bold">Publicidad Impresa</h2>
-            <p> Flyers, Trípticos, Dípticos, Pósters, Postales, Etiquetas, Menús, Serigrafía, etc.</p>
+            <p> Flyers, Trípticos, Dípticos,Etiquetas, Menús, Packing.</p>
 
 
             <h2 class="bold">Documentación Fiscal
@@ -110,13 +128,48 @@
             </p>
 
 
-
-
         </section>
 
+        <section class="contact">
 
+            <h3 class="contact__title">contacto</h3>
+
+            <div class="contact__traditional">
+                <a href="mailto:ventas@besful.uy"><img class="contact-icon" src="/src/icons/envelope-icon.png"
+                        alt="icono de sobre"><span>ventas@besful.uy</span></a>
+
+                <a href="tel:+598 22080625">
+                    <img class="contact-icon" src="/src/icons/phone-icon.png" alt="icon de teléfono">
+                    <span>2208 0625</span></a>
+
+            </div>
+
+            <div class="contact__whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=59899277386&text=Hola%2C%20quiero%20contactarme%20por%20un%20trabajo%20de%20imprenta."
+                    target="_blank">
+                    <img class="contact-icon" src="/src/icons/whatsapp-icon-64x64.png" alt="">
+                    <span>099 277 386</span></a>
+
+                <a href="https://api.whatsapp.com/send?phone=59891955190&text=Hola%2C%20quiero%20contactarme%20por%20un%20trabajo%20de%20imprenta."
+                    target="_blank"><img class="contact-icon" src="/src/icons/whatsapp-icon-64x64.png" alt="">
+                    <span>091 955 190</span>
+                </a>
+            </div>
+        </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+
+        <div class="map"><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.080058720095!2d-56.1790294!3d-34.8793359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f806b04a84eff%3A0x1f21da17481e643a!2sBesful%20S.A.!5e0!3m2!1ses!2suy!4v1755072774070!5m2!1ses!2suy"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <p class="address">Guadalupe 1835 - Montevideo</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
 </body>
 
 </html>

@@ -14,31 +14,41 @@ img {
   font-weight: 700;
 }
 button.burger-button {
-  /* border: none;
-  background-color: transparent; */
+  border: none;
+  background-color: transparent;
 }
 
 .body-bg {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
+  /* max-width: 800px; */
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
   background-color: #f6f6f6;
 }
-
+.topbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: teal;
+  position: fixed;
+  z-index: 10;
+  background-color: rgb(254, 254, 254);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.06);
+}
 .top-nav {
+  width: 100%;
+  max-width: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fefefe;
-  width: 100%;
+  /* width: 100%; */
   height: 80px;
-  top: 0;
-  position: fixed;
-  z-index: 10;
+  /* top: 0; */
+
   padding: 0 20px;
 }
 
@@ -56,8 +66,10 @@ button.burger-button {
   /* background-color: #a7a2a2; */
 }
 .main-content {
+  z-index: 1;
   padding: 0 20px;
-  max-width: 600px;
+  max-width: 800px;
+  /* margin-bottom: 50px; */
 }
 .header {
   display: flex;
@@ -74,14 +86,15 @@ button.burger-button {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   text-align: center;
   color: #1b1b1a;
+  line-height: 100%;
 }
 
 .services {
-  max-width: 600px;
+  /* max-width: 600px; */
   display: flex;
   text-align: center;
   width: 100%;
@@ -118,4 +131,84 @@ button.burger-button {
   color: #454545;
   font-size: 2rem;
   font-weight: 200;
+}
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact__title {
+  width: 100%;
+  font-weight: 200;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #ccc;
+}
+.contact-icon {
+  margin-right: 5px;
+  line-height: 20px;
+  max-width: 28px;
+}
+
+.contact__traditional,
+.contact__whatsapp {
+  font-size: 1.1rem;
+
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact__traditional a,
+.contact__whatsapp a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  & span {
+    font-weight: 600;
+    color: initial;
+  }
+}
+@media (max-width: 400px) {
+  .contact__traditional,
+  .contact__whatsapp {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contact__traditional a,
+  .contact__whatsapp a {
+    margin-bottom: 10px;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* background-color: #fefefe; */
+}
+.map {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+.address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262624;
+  color: #fefefe;
+  width: 100%;
+  height: 60px;
 }
